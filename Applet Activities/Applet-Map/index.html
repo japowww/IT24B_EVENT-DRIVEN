@@ -51,13 +51,9 @@
         text-align: center;
         color: white;
     }
-    
-    
     #map { 
         height: 380px;
         width: 680px;
-        object-position: center;
-       text-align: center;
         margin-left: 15rem;
     }
     .footer {
@@ -78,6 +74,7 @@
 
 
 </head>
+
 <body class="body">
 
     <h1> Mapa ni Dora</h1>     
@@ -119,13 +116,9 @@
                         })
                         .catch(error => console.error('Error loading markers:', error));
                 }
-            
-            
-        
-            
-            
+
             }
-            const myMap = new LeafletMap('map', [8.360004, 124.868419], 18);
+            const myMap = new LeafletMap('map', [8.367881,124.865979], 18);
             
             myMap.loadMarkersFromJson('latlong.json');
                 </script>
