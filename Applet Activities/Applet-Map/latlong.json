@@ -1,0 +1,81 @@
+[
+    {
+        "latitude": 8.359735,
+        "longitude": 124.869206,
+        "message": "CCS Faculty Office"
+    },
+    {
+        "latitude": 8.359639,
+        "longitude": 124.869179,
+        "message": "CCS Laboratory 1"
+    },
+    {
+        "latitude": 8.359554,
+        "longitude": 124.869153,
+        "message": "CCS Laboratory 2"
+    },
+
+    {
+        "latitude": 8.359153,
+        "longitude":124.868585,
+        "message": "BSBA Building"
+    },
+    {
+        "latitude": 8.359285,
+        "longitude": 124.867812,
+        "message": "NBSC Admin Building"
+
+    },
+    {
+        "latitude":8.360066,
+        "longitude": 124.868870,
+        "message": "Covered Court"
+
+    },
+    {
+        "latitude":8.388247,
+        "longitude": 124.842637,
+        "message": "Bahay Namen"
+
+    },
+    {
+        "latitude":8.359185,
+        "longitude": 124.86823,
+        "message": "NBSC Clinic"
+
+    },
+    {
+        "latitude":8.359211,
+        "longitude": 124.869079,
+        "message": "GEC Building"
+
+    },
+    {
+        "latitude":8.359869,
+        "longitude": 124.869224,
+        "message": "TEP Building"
+
+    },
+    {
+        "latitude":8.360140,
+        "longitude": 124.869301,
+        "message": "AVR Building"
+
+    },
+    {
+        "latitude":8.360363,
+        "longitude": 124.869338,
+        "message": "ROTC Office"
+
+    },
+    {
+        "latitude":8.360278,
+        "longitude": 124.867508,
+        "message": "Student Center Building"
+    },
+    {
+        "latitude":8.360851,
+        "longitude": 124.869462,
+        "message": "IMO Office"
+    }
+]
