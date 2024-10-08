@@ -48,7 +48,8 @@
   <style>
     .body{
         background-color: black;
-    
+        text-align: center;
+        color: white;
     }
     
     
@@ -56,21 +57,30 @@
         height: 380px;
         width: 680px;
         object-position: center;
-        position: absolute;
+       text-align: center;
         margin-left: 15rem;
-    
-        
-    
-    
     }
+    .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;  
+  background-color:#373A42;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  padding: 8px 0;  
+  box-sizing: border-box; 
+  z-index: 100; 
+  overflow: hidden;
+}
     </style>
     
 
 
 </head>
 <body class="body">
-    <h1 class="map" style="text-align: center; color: white; font-family: 'Times New Roman', Times, serif; margin-top: 3rem; margin-bottom: 2rem;">
-        Mapa ni Dora</h1>     
+
+    <h1> Mapa ni Dora</h1>     
         <div id="map"></div>
 
         <script>
@@ -111,7 +121,7 @@
                 }
             
             
-            
+        
             
             
             }
@@ -119,6 +129,13 @@
             
             myMap.loadMarkersFromJson('latlong.json');
                 </script>
+
+                
+    <footer >
+        <div class="footer">
+            😎 japo's creation, <strong><span>Mapa ni Dorabels </span></strong>. Aim to Excel
+        </div>
+    </footer>
     
 </body>
 </html>
