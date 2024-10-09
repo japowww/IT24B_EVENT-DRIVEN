@@ -52,11 +52,26 @@
         color: white;
         font-family: 'Times New Roman', Times, serif;
     }
-    #map { 
-        height: 380px;
-        width: 680px;
-        margin-left: 15rem;
+    #map {
+    height: 50vh;
+    width: 90%;    
+    max-width: 1000px; 
+    margin: 0 auto;  
+}
+
+@media (min-width: 768px) {  
+    #map {
+        width: 80%;  
+        height: 60vh;  
     }
+}
+
+@media (min-width: 1024px) {  
+    #map {
+        width: 70%;  
+        height: 70vh;  
+    }
+}
     .footer {
   position: fixed;
   left: 0;
