@@ -6,7 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let loggedData = [];
 
     function logData() {
-        loggedData.push(new Date().toLocaleString());
+        const timestamp = new Date();
+        const date = timestamp.toLocaleDateString();  
+        const time = timestamp.toLocaleTimeString(); 
+        loggedData.push(`(${date})  at  "${time}"`); 
         updateDisplay();
     }
 
@@ -20,8 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
             .map(data => `
                 <div class="card mb-2">
                     <div class="card-body">
-                        <h5 class="card-title">Logged Data</h5>
-                        <p class="card-text">${data}</p>
+                        <h5 class="card-title">Logged on:</h5>
+                        <p class="card-text"> ${data}  </p>
                     </div>
                 </div>
             `).join('');
