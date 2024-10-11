@@ -7,9 +7,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function logData() {
         const timestamp = new Date();
-        const date = timestamp.toLocaleDateString();  
-        const time = timestamp.toLocaleTimeString(); 
-        loggedData.push(`(${date})  at  "${time}"`); 
+        const date = timestamp.toLocaleDateString();
+        const time = timestamp.toLocaleTimeString();
+        const logEntry = `${date} at ${time}`;
+        
+        
+        loggedData.push(logEntry);
+        
+       
         updateDisplay();
     }
 
@@ -19,17 +24,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function updateDisplay() {
-        cardContainer.innerHTML = loggedData
-            .map(data => `
-                <div class="card mb-2">
-                    <div class="card-body">
-                        <h5 class="card-title">Logged on:</h5>
-                        <p class="card-text"> ${data}  </p>
-                    </div>
+    cardContainer.innerHTML = loggedData
+        .map(data => `
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">Logged Data</h5>
+                    <p class="card-text">Logged on: ${data}</p>
+                    <img src="welcome.gif" 
+                         alt="Log in animation" 
+                         style="width: 100%; max-width: 150px; margin-top: 10px;">
                 </div>
-            `).join('');
+            </div>
+        `).join('');
+        
+    logCountElement.textContent = `Total Logs: ${loggedData.length}`;
+}
 
-        logCountElement.textContent = `Total Logs: ${loggedData.length}`;
+
+    function addImage() {
+        const image = document.createElement('img');
+        image.src = 'welcome.gif';  
+        image.alt = 'Logged Image';
+        image.style.width = '150px';  
+        image.style.marginTop = '10px';  
+        image.style.display = 'block';  
+        image.style.marginLeft = 'auto';  
+        image.style.marginRight = 'auto';
+        cardContainer.appendChild(image);
     }
 
     logButton.addEventListener('click', logData);
