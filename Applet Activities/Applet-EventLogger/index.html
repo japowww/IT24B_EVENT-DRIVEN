@@ -60,12 +60,25 @@
       z-index: 100; 
       overflow: hidden;
     }
+    log{
+margin-left: 5rem;
+      float: right;
+    }
         </style>
 </head>
 <body class="body">
     <h1 class="header">Event Logger</h1>
 
-
+    <div>
+    <h3 class="cardContainer" id="logCount">Total Logs: 0</h3>
+    <br>
+    <button class="btn btn-primary" id="logButton">Log in</button>
+    <button class="btn btn-secondary"  id="clearButton">Clear</button>
+   <h2>Collected Data:</h2>
+   <div id="cardContainer" style="width: 20rem; margin-left: 50rem;"></div>
+  </div>
+  
+<script src="logger.js"></script>
 
 
 
