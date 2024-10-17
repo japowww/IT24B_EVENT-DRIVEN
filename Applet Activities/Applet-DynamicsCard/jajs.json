@@ -22,6 +22,12 @@
         "restaurant_name": "Del Monte Clubhouse",
         "restaurant_location": "Camp Phillips, Manolo Fortich",
         "restaurant_specialty": "American-inspired dishes, famous for steaks, burgers, and fresh fruits and vegetables."
+    },
+    {
+        "restaurant_id": 5,
+        "restaurant_name": "Maila’s Food House",
+        "restaurant_location": "Alae, Manolo Fortich",
+        "restaurant_specialty": "Filipino dishes such as pancit, lumpia, and lechon manok."
     }
 
 ]

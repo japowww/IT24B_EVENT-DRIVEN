@@ -40,7 +40,7 @@ class Restaurant {
         const restaurantSearchListContainer = document.getElementById(`restaurantSearchList`);
 
         restaurantSearchBar.addEventListener(`input`, () => {
-            this.filterrestaurant(restaurantSearchBar.value, restaurantSearchListContainer);
+            this.filterRestaurant(restaurantSearchBar.value);
         });
     }
 
@@ -50,7 +50,7 @@ class Restaurant {
             return restaurantName.toLowerCase().includes(query.toLowerCase());
         });
 
-        this.renderRestaurantlist(filteredRestaurants, restaurantSearchListContainer);
+        this.renderRestaurant(filteredRestaurants, restaurantSearchListContainer);
     }
 }
 
