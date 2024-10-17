@@ -60,7 +60,35 @@
       z-index: 100; 
       overflow: hidden;
     }
+    .input-search{
+          margin-left: 25%;
+          margin-top: 2rem;
+          width:50%;
+        }
 
+        .input-search {
+            margin-left: 25%;
+            margin-top: 2rem;
+            width: 50%;
+        }
+
+        .card-container {
+            margin-top: 3rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .card {
+            margin: 1rem;
+            width: 25rem;
+            background-color: #282828;
+            color: white;
+        }
+
+        .card-body {
+            padding: 15px;
+        }
         </style>
 
 
@@ -75,16 +103,20 @@
     <h1 class="header">Dynamic Cards</h1>
 
 
-
     <div class="input-group input-group-lg input-search">
       <span class="input-group-text">Search</span>
-      <input type="text" class="form-control" id="studentSearchBar" >
+      <input type="text" class="form-control" id="restaurantSearchBar" placeholder="Search for restaurants...">
     </div>
-    <div id="studentList"  style="margin-left: 3.5rem;"></div>
-    <div id="studentSearchList" style="margin-left: 3.5rem;"></div>
+
+    
+    <div id="resList" class="card-container" style="margin-left: 3.5rem;"></div>
+
+    <!-- Container for filtered restaurants -->
+    <div id="restaurantSearchList" class="card-container" style="margin-left: 3.5rem;"></div>
 
 
-<script src="brain.js"></script>r
+
+<script src="brain.js"></script>
 
 
 

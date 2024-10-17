@@ -1,0 +1,27 @@
+[
+    {
+        "restaurant_id": 1,
+        "restaurant_name": "The Stone House",
+        "restaurant_location": "Barangay Dahilayan, Manolo Fortich",
+        "restaurant_specialty": "Filipino comfort food, grilled and sizzling dishes"
+    },
+    {
+        "restaurant_id": 2,
+        "restaurant_name": "Monastery Café",
+        "restaurant_location": "Monastery of Transfiguration, Barangay San Jose, Malaybalay (near Manolo Fortich)",
+        "restaurant_specialty": "Snacks, homemade bread, pastries, and coffee."
+    },
+    {
+        "restaurant_id": 3,
+        "restaurant_name": "Hilltop Garden Restaurant",
+        "restaurant_location": "Barangay Dahilayan, Manolo Fortich",
+        "restaurant_specialty": "Filipino and international cuisine with a scenic view; known for crispy pata and beef dishes."
+    },
+    {
+        "restaurant_id": 4,
+        "restaurant_name": "Del Monte Clubhouse",
+        "restaurant_location": "Camp Phillips, Manolo Fortich",
+        "restaurant_specialty": "American-inspired dishes, famous for steaks, burgers, and fresh fruits and vegetables."
+    }
+
+]
