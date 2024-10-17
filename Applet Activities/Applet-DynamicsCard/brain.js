@@ -1,33 +1,37 @@
-class Restaurantlist {
+class Restaurant {
     constructor(dataUrl) {
         this.dataUrl = dataUrl;
-        this.restaurant = [];
+        this.RESTO = [];
         this.init();
     }
 
     async init() {
         await this.fetchData();
-        this.renderRestaurantlist(this.restaurant);
+        this.renderRestaurant(this.RESTO);
         this.bindSearchEvent();
     }
 
     async fetchData() {
         try {
             const response = await fetch(this.dataUrl);
-            this.restaurant = await response.json();
+            this.RESTO = await response.json();
         } catch (error) {
             console.error(`Error ka dai:`, error);
         }
     }
 
-    renderRestaurantlist(resto, container) {
-        if (!container) {
-            container = document.getElementById(`restaurantlist`);
-        }
-        container.innerHTML = resto.map(restaurant => `
-            <button class="btn btn-primary" style="margin-top: 15px; width: 25rem;">
-                ${restaurant.restaurant_name} | ${restaurant.restaurant_location}
-            </button><br>
+   
+    renderRestaurant(restos, container = document.getElementById('resList')) {
+        container.style.display = 'flex';        
+        container.style.flexDirection = 'column'; 
+        container.style.alignItems = 'center'; 
+
+
+        container.innerHTML = restos.map(restaurant => `
+            <button class="btn btn-primary" style="margin-top: 15px; width: 25rem; background-color: white;  color: Black;    border: #373A42;  box-shadow: #373A42;"  >
+                <strong>Name:</strong> ${restaurant.restaurant_name}<br>
+         <strong>Location:</strong> ${restaurant.restaurant_location}
+        </button><br>
         `).join('');
     }
 
@@ -40,8 +44,8 @@ class Restaurantlist {
         });
     }
 
-    filterrestaurant(query, restaurantSearchListContainer) {
-        const filteredRestaurants = this.restaurant.filter(restaurant => {
+    filterRestaurant(query, restaurantSearchListContainer) {
+        const filteredRestaurants = this.RESTO.filter(restaurant => {
             const restaurantName = `${restaurant.restaurant_name} ${restaurant.restaurant_location}`;
             return restaurantName.toLowerCase().includes(query.toLowerCase());
         });
@@ -50,4 +54,4 @@ class Restaurantlist {
     }
 }
 
-const resList = new Restaurantlist(`jajs.json`);
+const resList = new Restaurant(`jajs.json`);
