@@ -66,6 +66,11 @@
             z-index: 100;
             overflow: hidden;
         }
+       .form-control{
+            width: 50%;
+            margin-left: 25%;
+            
+        }
         
         </style>
 
@@ -73,6 +78,27 @@
 </head>
 <body class="body"> 
 
+    <h1 class="header">Basic Events (BMI Calculator)</h1>
+
+    <div class="container col-md-6 offset-md-3">
+        <form id="bmiForm">
+            <div class="mb-3">
+                <label for="weight" class="form-label">Weight (kg)</label>
+                <input type="number" id="weight" class="form-control" placeholder="Enter your weight" required>
+            </div>
+
+            <div class="mb-3">
+                <label for="heightCm" class="form-label">Height (cm)</label>
+                <input type="number" id="heightCm" class="form-control" placeholder="Enter your height in centimeters" required>
+            </div>
+
+            <button type=" submit" class="btn btn-primary">Calculate BMI</button>
+            
+        </form>
+        <div class=" container result" id="bmiResult" style="margin-top: 3rem; "></div>
+        
+    </div>
+    <script src="script.js"></script>
 
 
 
@@ -81,7 +107,7 @@
 
 
 
-    
+
     <footer>
         <div class="footer">
             😎 japo's creation, <strong><span>Restaurant </span></strong>. Aim to Excel!
