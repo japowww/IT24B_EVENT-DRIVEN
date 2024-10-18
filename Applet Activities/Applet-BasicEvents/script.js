@@ -22,7 +22,7 @@ function displayBMIResult(bmi) {
 
     if (bmi < 18.5) {
         resultMessage += "Underweight";
-        bmiResult.style.color = "orange";
+       bmiResult.style.color = "orange";
     } else if (bmi >= 18.5 && bmi <= 24.9) {
         resultMessage += "Normal weight";
         bmiResult.style.color = "green";
