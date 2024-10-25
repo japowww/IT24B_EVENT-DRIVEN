@@ -1,24 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-   
+
+    <title>Applet To Do List</title>
 
 
-
-    <title>Applet Map</title>
-
-    
+        
 <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="index.html">Applet's</a>
@@ -39,14 +30,14 @@
               <li><a class="dropdown-item" href="/Applet Activities/Applet-DynamicsElements/index.html">Applet Dynamic Elements</a></li>
               <li><a class="dropdown-item" href="/Applet Activities/Applet-EventLogger/index.html">Applet EventLogger</a></li>
               <li><a class="dropdown-item" href="/Applet Activities/Applet-BasicEvents/index.html">Applet Basic Events</a></li>
-              <li><a class="dropdown-item" href="/Applet Activities/Applet-ToDoList/index.html">Applet To Do List</a></li>
-
+              <li><a class="dropdown-item" href="/Applet Activities/Applet-Map/index.html">Applet Map</a></li>
             </ul>
           </li>
         </ul>
       </div>
     </div>
   </nav>
+
 
   <style>
     .body{
@@ -55,26 +46,7 @@
         color: white;
         font-family: 'Times New Roman', Times, serif;
     }
-    #map {
-    height: 50vh;
-    width: 90%;    
-    max-width: 1000px; 
-    margin: 0 auto;  
-}
 
-@media (min-width: 768px) {  
-    #map {
-        width: 80%;  
-        height: 60vh;  
-    }
-}
-
-@media (min-width: 1024px) {  
-    #map {
-        width: 70%;  
-        height: 70vh;  
-    }
-}
     .footer {
   position: fixed;
   left: 0;
@@ -89,60 +61,19 @@
   overflow: hidden;
 }
     </style>
-    
-
 
 </head>
-
 <body class="body">
 
-    <h1> Mapa ni Dora</h1>     
-        <div id="map"></div>
 
-        <script>
 
-            class LeafletMap {
-            
-            constructor(containerId, center, zoom) {
-                this.map = L.map(containerId).setView(center, zoom);
-                this.initTileLayer();
-            }
-            
-            initTileLayer() {
-              
-            
-            
-            L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-                        maxZoom: 19,
-                        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">Dora Map hack</a>'
-                    }).addTo(this.map);
-            
-            }
-            
-            
-            addMarker(lat, lng, message) {
-                    const marker = L.marker([lat, lng]).addTo(this.map);
-                    marker.bindPopup(message);
-                }
-            
-                loadMarkersFromJson(url) {
-                    fetch(url)
-                        .then(response => response.json())
-                        .then(data => {
-                            data.forEach(marker => {
-                                this.addMarker(marker.latitude, marker.longitude, marker.message);
-                            });
-                        })
-                        .catch(error => console.error('Error loading markers:', error));
-                }
 
-            }
-            const myMap = new LeafletMap('map', [8.367881,124.865979], 18);
-            
-            myMap.loadMarkersFromJson('latlong.json');
-                </script>
 
-                
+
+
+
+
+    
     <footer >
         <div class="footer">
             😎 japo's creation, <strong><span>Mapa ni Dorabels </span></strong>. Aim to Excel
