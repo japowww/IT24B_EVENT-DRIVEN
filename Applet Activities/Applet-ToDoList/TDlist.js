@@ -39,4 +39,21 @@ Listitem.innerHTML = `
         else if (action === 'editButton') this.editTask(taskItem);
         else if (action === 'removeButton') taskItem.remove();
     }
+
+    updateTask(taskText) {
+        this.todoList.children[this.editingIndex].querySelector('.task-text').textContent = taskText;
+    }
+
+    editTask(taskItem) {
+        this.todoInput.value = taskItem.querySelector('.task-text').textContent;
+        this.editingIndex = Array.from(this.todoList.children).indexOf(taskItem);
+        this.addButton.textContent = 'Update';
+    }
+
+    resetEditing() {
+        this.editingIndex = -1;
+        this.addButton.textContent = 'Add';
+    }
 }
+
+document.addEventListener('DOMContentLoaded', () => new TodoList());
