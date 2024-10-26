@@ -35,15 +35,22 @@ class todolist{
         this.todoList.appendChild(listItem);
     }
     handleButtonClick(e) {
-        const action =  e.target.classList.contains('doneButton') ? 'done' :
-        e.target.classList.contains('editButton') ? 'edit' :
-        e.target.classList.contains('removeButton') ? 'remove' : null;
-if (!action) return;
-        const taskItem = e.target.closest('li');
+        const target = e.target;
+        const action = target.classList.contains('doneButton') ? 'done' :
+                       target.classList.contains('editButton') ? 'edit' :
+                       target.classList.contains('removeButton') ? 'remove' : null;
 
-        if (action === 'doneButton') taskItem.querySelector('.task-text').classList.toggle('completed');
-        else if (action === 'editButton') this.editTask(taskItem);
-        else if (action === 'removeButton') taskItem.remove();
+        if (!action) return;
+
+        const taskItem = target.closest('li');
+
+        if (action === 'done') {
+            taskItem.querySelector('.task-text').classList.toggle('completed');
+        } else if (action === 'edit') {
+            this.editTask(taskItem);
+        } else if (action === 'remove') {
+            taskItem.remove();
+        }
     }
 
     updateTask(taskText) {
