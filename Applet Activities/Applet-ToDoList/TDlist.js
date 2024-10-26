@@ -16,7 +16,7 @@ class todolist{
             this.resetEditing();
         }
     }
-    
+
     addTask(taskText){
 const   Listitem = document.createElement(`li`);
 Listitem.innerHTML = `
@@ -28,6 +28,15 @@ Listitem.innerHTML = `
                 <button class="btn btn-danger btn-sm removeButton">Remove</button>
             </div>
         `;
-        this.todoList.appendChild(listItem);
+        this.todoList.appendChild(Listitem);
+    }
+
+    handleButtonClick(e) {
+        const action = e.target.className;
+        const taskItem = e.target.closest('li');
+
+        if (action === 'doneButton') taskItem.querySelector('.task-text').classList.toggle('completed');
+        else if (action === 'editButton') this.editTask(taskItem);
+        else if (action === 'removeButton') taskItem.remove();
     }
 }
