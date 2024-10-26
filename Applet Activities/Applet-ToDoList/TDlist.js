@@ -20,10 +20,10 @@ class todolist{
         }
     }
 
-    addTask(taskText){
-const   Listitem = document.createElement(`li`);
-listItem.className = 'list-group-item'; 
-Listitem.innerHTML = `
+    addTask(taskText) {
+        const listItem = document.createElement('li');
+        listItem.className = 'list-group-item';
+        listItem.innerHTML = `
             <span class="task-text">${taskText}</span>
             <span class="timestamp" style="display: block; margin-top: 0.5rem; color: gray;">Date Added: ${new Date().toLocaleString()}</span>
             <div style="margin-top: 0.5rem;">
@@ -32,9 +32,8 @@ Listitem.innerHTML = `
                 <button class="btn btn-danger btn-sm removeButton">Remove</button>
             </div>
         `;
-        this.todoList.appendChild(Listitem);
+        this.todoList.appendChild(listItem);
     }
-
     handleButtonClick(e) {
         const action =  e.target.classList.contains('doneButton') ? 'done' :
         e.target.classList.contains('editButton') ? 'edit' :
