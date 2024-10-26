@@ -32,7 +32,10 @@ Listitem.innerHTML = `
     }
 
     handleButtonClick(e) {
-        const action = e.target.className;
+        const action =  e.target.classList.contains('doneButton') ? 'done' :
+        e.target.classList.contains('editButton') ? 'edit' :
+        e.target.classList.contains('removeButton') ? 'remove' : null;
+if (!action) return;
         const taskItem = e.target.closest('li');
 
         if (action === 'doneButton') taskItem.querySelector('.task-text').classList.toggle('completed');
