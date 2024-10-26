@@ -1,20 +1,18 @@
-class todolist{
-    constructor(){
-        this.EditingIndex = -1;
-        this.addButton = document.getElementById(`addButton`);
-        this.todoInput = document.getElementById('todoInput');  
-        this.todoList = document.getElementById('todoList');  
-        this.addButton = addEventListener(`click`, () => this.addOrUpdateTask());
-        this.todolist.addEventListener(`click`, (e) => this.handlebuttnclic(e));  
+class TodoList {
+    constructor() {
+        this.editingIndex = -1;
+        this.addButton = document.getElementById('addButton');
+        this.todoInput = document.getElementById('todoInput');
+        this.todoList = document.getElementById('todoList');
+
+        this.addButton.addEventListener('click', () => this.addOrUpdateTask());
+        this.todoList.addEventListener('click', (e) => this.handleButtonClick(e));  
     }
+
     addOrUpdateTask() {
         const taskText = this.todoInput.value.trim();
         if (taskText) {
-            if (this.editingIndex === -1) {
-                this.addTask(taskText);
-            } else {
-                this.updateTask(taskText);
-            }
+            this.editingIndex === -1 ? this.addTask(taskText) : this.updateTask(taskText);
             this.todoInput.value = '';
             this.resetEditing();
         }
@@ -34,23 +32,18 @@ class todolist{
         `;
         this.todoList.appendChild(listItem);
     }
-    handleButtonClick(e) {
-        const target = e.target;
-        const action = target.classList.contains('doneButton') ? 'done' :
-                       target.classList.contains('editButton') ? 'edit' :
-                       target.classList.contains('removeButton') ? 'remove' : null;
 
+    handleButtonClick(e) {
+        const action = e.target.classList.contains('doneButton') ? 'done' :
+                       e.target.classList.contains('editButton') ? 'edit' :
+                       e.target.classList.contains('removeButton') ? 'remove' : null;
         if (!action) return;
 
-        const taskItem = target.closest('li');
+        const taskItem = e.target.closest('li');
 
-        if (action === 'done') {
-            taskItem.querySelector('.task-text').classList.toggle('completed');
-        } else if (action === 'edit') {
-            this.editTask(taskItem);
-        } else if (action === 'remove') {
-            taskItem.remove();
-        }
+        if (action === 'done') taskItem.querySelector('.task-text').classList.toggle('completed');
+        else if (action === 'edit') this.editTask(taskItem);
+        else if (action === 'remove') taskItem.remove();
     }
 
     updateTask(taskText) {
