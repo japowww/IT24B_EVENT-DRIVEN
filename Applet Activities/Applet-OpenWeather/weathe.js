@@ -43,4 +43,17 @@ async fetchWeatherData(query) {
         return null;
     }
 }
+
+displayWeather(data) {
+    this.cityName.textContent = `${data.name}, ${data.sys.country}`;
+    this.temperature.textContent = `Temperature: ${data.main.temp} °C`;
+    this.description.textContent = `Weather: ${data.weather[0].description}`;
+    this.humidity.textContent = `Humidity: ${data.main.humidity}%`;
+    this.windSpeed.textContent = `Wind Speed: ${data.wind.speed} m/s`;
+    this.weatherIcon.src = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+
+    this.weatherCard.style.display = 'block';
+}
+
+
 }
