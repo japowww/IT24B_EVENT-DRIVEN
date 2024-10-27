@@ -33,4 +33,14 @@ async getWeatherByLocation() {
         data ? this.displayWeather(data) : alert('Unable to retrieve weather data for your location.');
     }, () => alert('Unable to retrieve your location. Please allow location access.'));
 }
+
+async fetchWeatherData(query) {
+    try {
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?${query}&appid=${this.apiKey}&units=metric`);
+        return response.ok ? response.json() : null;
+    } catch (error) {
+        console.error('Error fetching weather data:', error);
+        return null;
+    }
+}
 }
