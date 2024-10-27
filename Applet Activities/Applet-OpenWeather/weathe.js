@@ -54,6 +54,9 @@ displayWeather(data) {
 
     this.weatherCard.style.display = 'block';
 }
-
-
 }
+document.addEventListener('DOMContentLoaded', () => {
+    new WeatherApp();
+    const modal = new bootstrap.Modal(document.getElementById('infoModal'));
+    modal.show();
+});
