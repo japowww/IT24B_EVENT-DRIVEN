@@ -22,8 +22,8 @@ class TodoList {
         const listItem = document.createElement('li');
         listItem.className = 'list-group-item';
         listItem.innerHTML = `
-            <span class="task-text" style ="width: 50%;">${taskText}</span>
-            <span class="timestamp" style="display: block; margin-top: 0.5rem; color: white; font-size: 0.9rem; font-style: italic; font-weight: 300;">Date Added: ${new Date().toLocaleDateString()} <br> Time: ${new Date().toLocaleTimeString()}</span>
+            <span class="task-text" style ="width: 50%; font-size: large;">${taskText}</span>
+            <span class="timestamp" style="display: block; margin-top: 0.5rem; color: white; font-size: smaller  ; font-style: italic; font-weight: 300;">Date Added: ${new Date().toLocaleDateString()} <br> Time: ${new Date().toLocaleTimeString()}</span>
             <div style="margin-top: 0.5rem; " >
                 <button class="btn btn-success btn-sm doneButton">Done</button>
                 <button class="btn btn-warning btn-sm editButton">Edit</button>

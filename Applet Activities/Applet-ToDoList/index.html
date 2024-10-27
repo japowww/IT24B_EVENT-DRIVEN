@@ -14,6 +14,11 @@
             text-align: center;
             color: white;
             font-family: 'Times New Roman', Times, serif;
+            background-image:url(backgrounf.jpg);
+          
+           background-size: auto; /* Keeps the image at its real size */
+    background-repeat: no-repeat;
+    background-position: center 0%; /* Centers the image */
         }
 
         .footer {
@@ -34,29 +39,29 @@
             color: gray;
         }
         #todoInput{
-            margin-top: 5rem;
+            margin-top: 7rem;
             height: 40px;
-            width: 25rem;
+            width: 20rem;
         }
         .todo-container {
-        max-width: 600px; /* Adjust this value for desired width */
-        margin: 0 auto; /* Centers the container */
+        max-width: 600px; 
+        margin: 0 auto; 
         padding: 1rem;
-        background-color: #f0eeee; /* Optional: Adds a background color */
-        border-radius: 8px; /* Optional: Rounds the corners */
+        background-color: #f0eeee; 
+        border-radius: 8px; 
     }
 
     .todo-container h2 {
-        color: white; /* Adjust as needed */
+        color: white; 
     }
 
     .list-group-item {
         color: white;
-        background-color: #444;
-      
+        background-color:  #645732;
+      font-size: large;
         border-color: #555;
-        width: 50%;
-       margin-left: 25%;
+        width: 30%;
+       margin-left: 35%;
     }
     </style>
 </head>
@@ -65,7 +70,7 @@
 
 <div class="container">
 
-  <input type="text" id="todoInput" placeholder="Enter task" />
+  <input  type="text" id="todoInput" placeholder="Enter task" />
 <button id="addButton" class="btn btn-primary">Add</button>
 <ul id="todoList" class="list-group mt-3"></ul>
 </div>
