@@ -16,4 +16,13 @@ class WeatherApp{
         this.getWeatherBtn.addEventListener('click', () => this.getWeather());
         this.getLocationBtn.addEventListener('click', () => this.getWeatherByLocation());
 }
+
+async getWeather() {
+    const city = this.cityInput.value;
+    if (!city) return alert('Please enter a city name.');
+
+    const data = await this.fetchWeatherData(`q=${city}`);
+    data ? this.displayWeather(data) : alert('City not found. Please try again.');
+}
+
 }
