@@ -25,4 +25,12 @@ async getWeather() {
     data ? this.displayWeather(data) : alert('City not found. Please try again.');
 }
 
+async getWeatherByLocation() {
+    if (!navigator.geolocation) return alert('Geolocation is not supported by this browser.');
+
+    navigator.geolocation.getCurrentPosition(async ({ coords }) => {
+        const data = await this.fetchWeatherData(`lat=${coords.latitude}&lon=${coords.longitude}`);
+        data ? this.displayWeather(data) : alert('Unable to retrieve weather data for your location.');
+    }, () => alert('Unable to retrieve your location. Please allow location access.'));
+}
 }
