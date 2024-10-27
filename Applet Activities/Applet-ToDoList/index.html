@@ -8,6 +8,35 @@
 
     <title>Applet To Do List</title>
 
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">Applet's</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="/Applet Activities/Applet-Gallery/index.html">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Applet list
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">...</a></li>
+                  <li><a class="dropdown-item" href="/Applet Activities/Applet-DynamicsElements/index.html">Applet Dynamic Elements</a></li>
+                  <li><a class="dropdown-item" href="/Applet Activities/Applet-EventLogger/index.html">Applet EventLogger</a></li>
+                  <li><a class="dropdown-item" href="/Applet Activities/Applet-BasicEvents/index.html">Applet Basic Events</a></li>
+                  <li><a class="dropdown-item" href="/Applet Activities/Applet-Map/index.html">Applet Map</a></li>
+    
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
     <style>
         .body {
             background-color: black;
@@ -16,9 +45,9 @@
             font-family: 'Times New Roman', Times, serif;
             background-image:url(backgrounf.jpg);
           
-           background-size: auto; /* Keeps the image at its real size */
+           background-size: auto; 
     background-repeat: no-repeat;
-    background-position: center 0%; /* Centers the image */
+    background-position: center -9%; 
         }
 
         .footer {
@@ -39,7 +68,7 @@
             color: gray;
         }
         #todoInput{
-            margin-top: 7rem;
+            margin-top: 2rem;
             height: 40px;
             width: 20rem;
         }
@@ -49,10 +78,6 @@
         padding: 1rem;
         background-color: #f0eeee; 
         border-radius: 8px; 
-    }
-
-    .todo-container h2 {
-        color: white; 
     }
 
     .list-group-item {
@@ -66,6 +91,8 @@
     </style>
 </head>
 <body class="body">
+    <h1 style="color: black; font-family: Georgia, 'Times New Roman', Times, serif; margin-top: 5rem; font-weight: bold;">
+        To Do List</h1>
 
 
 <div class="container">
@@ -82,7 +109,7 @@
 
     <footer>
         <div class="footer">
-            😎 japo's creation, <strong><span>Mapa ni Dorabels </span></strong>. Aim to Excel
+            😎 japo's creation, <strong><span>To Do list </span></strong>. Aim to Excel
         </div>
     </footer>
 
